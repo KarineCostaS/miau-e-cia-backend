@@ -17,7 +17,7 @@ COPY . .
 RUN npm install -g json-server && npm install -g browser-sync
 
 # Exponha as portas que o browser-sync e o json-server estão ouvindo
-EXPOSE 3000 
+EXPOSE 5000 
 
 # Execute o json-server e o browser-sync
 CMD ["sh", "-c", "npx json-server --watch db.json & browser-sync start --server --file . --host 0.0.0.0 --port 5000 --startPath index.html"]
