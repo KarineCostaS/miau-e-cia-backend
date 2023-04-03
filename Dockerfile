@@ -10,8 +10,7 @@ RUN npx json-server --watch db.json
 
 RUN npm install -g browser-sync
 
-RUN browser-sync start --server --file . --host --port 5000 --startPath index.html
-
+CMD [ "browser-sync start --server --file . --host --port 5000 --startPath index.html" ] 
 
 COPY . .
 
